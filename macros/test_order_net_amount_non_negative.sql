@@ -1,4 +1,4 @@
-{% test order_net_amount_non_negative(model, column_name) %}
+{% test order_gross_amount_non_negative(model, column_name) %}
 
 select *
 from {{ model }}
