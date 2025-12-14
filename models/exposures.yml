@@ -1,0 +1,27 @@
+version: 2
+
+exposures:
+  - name: revenue_performance_dashboard
+    type: dashboard
+    url: "https://bi.company.com/revenue_dashboard"
+    owner:
+      name: "John Doe"
+      email: "john.doe@company.com"
+    description: "Tracks daily and monthly revenue performance metrics"
+    depends_on:
+      - ref('fct_mercurymart__orders_daily')
+      - ref('dim_mercurymart__customers')
+    maturity: high
+
+  - name: marketing_campaign_insights
+    type: dashboard
+    url: "https://bi.company.com/marketing_campaigns"
+    owner:
+      name: "Jane Smith"
+      email: "jane.smith@company.com"
+    description: "Reports campaign performance, conversion rates, and engagement metrics"
+    depends_on:
+      - ref('stg_mercurymart__orders')
+      - ref('dim_mercurymart__customers')
+      # - ref('stg_mercurymart__web_events')
+    maturity: medium
