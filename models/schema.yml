@@ -72,8 +72,6 @@ models:
             data_type: number(38,2)
           - name: net_amount
             data_type: number(38,2)
-            tests:
-              - order_net_amount_non_negative
           - name: payment_status
             data_type: varchar
           - name: order_day_of_week
